@@ -34,6 +34,8 @@ II. uso de turtlesim, ros2 e rqt
 
 II.1 turtlesim
 
+é um simulador simples para aprender os conceitos básicos do ROS 2, como nós, tópicos e serviços
+
 1. código instalação
 
 sudo apt update
@@ -48,5 +50,29 @@ ros2 run turtlesim turtlesim_node
 
 abaixo do comando, haverá mensagens do nó. ali, pode-se ver o nome padrão da tartaruga e as coordenadas onde ela é gerada, a janela do simulador deve aparecer, com uma tartaruga no centro.
 
-3. uso turtlesim
+3. uso
 
+em um novo terminal (já com source executado):
+ros2 run turtlesim turtle_teleop_key
+
+II.2 ros2
+
+permite gerenciar, inspecionar e interagir com o sistema ROS 2, como iniciar nós, ajustar parâmetros e escutar tópicos
+
+II.3 rqt
+
+é uma interface gráfica que facilita manipular componentes do ROS 2 de forma mais amigável, embora tudo isso também possa ser feito via terminal
+
+1. código instalação
+
+sudo apt update
+sudo apt install '~nros-humble-rqt*'
+
+para executar:
+rqt
+
+2. uso
+
+quando rodar pela primeira vez, selecionar "Plugins > Services > Service Caller" para chamar os serviços
+
+III. entendendo nós
