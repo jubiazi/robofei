@@ -76,3 +76,25 @@ rqt
 quando rodar pela primeira vez, selecionar "Plugins > Services > Service Caller" para chamar os serviços
 
 III. entendendo nós
+
+cada nó no ROS deve ser responsável por uma única finalidade modular, por exemplo, controlar os motores das rodas. cada nó pode enviar e receber dados de outros nós por meio de tópicos, serviços, ações ou parâmetros. um sistema robótico completo é composto por vários nós trabalhando em conjunto. no ROS 2, um único executável (programa em C++, programa em Python, etc.) pode conter um ou mais nós.
+
+IV. entendendo tópicos
+
+o ROS 2 divide sistemas complexos em vários nós modulares, os tópicos são um elemento fundamental, atuando como um barramento para que os nós troquem mensagens.
+
+V. entendendo serviços
+
+os serviços são outro método de comunicação entre nós. os serviços são baseados em um modelo de chamada e resposta, em contraste com o modelo publisher-subscriber dos tópicos. enquanto os tópicos permitem que os nós "assinem" fluxos de dados e recebam atualizações contínuas, os serviços fornecem dados apenas quando são chamados especificamente por um cliente.
+
+VI. entendendo parâmetros
+
+um parâmetro é um valor de configuração de um nó, são como configurações do nó. um nó pode armazenar parâmetros como inteiros, números de ponto flutuante (floats), valores booleanos, strings e listas. no ROS 2, cada nó mantém seus próprios parâmetros. 
+
+VII. entendendo ações 
+
+as actions são um tipo de comunicação no ROS 2 projetado para tarefas de longa duração, são compostas por três partes: objetivo (goal), retorno (feedback) e resultado (result).
+
+são baseadas em tópicos e serviços, semelhantes aos serviços, mas com duas diferenças principais: podem ser canceladas e fornecem feedback contínuo, em vez de apenas uma resposta única.
+
+as actions seguem o modelo cliente-servidor: um nó cliente envia um objetivo a um nó servidor, que o reconhece e retorna tanto o fluxo de feedback quanto o resultado final.
