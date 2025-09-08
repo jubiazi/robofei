@@ -98,3 +98,38 @@ as actions são um tipo de comunicação no ROS 2 projetado para tarefas de long
 são baseadas em tópicos e serviços, semelhantes aos serviços, mas com duas diferenças principais: podem ser canceladas e fornecem feedback contínuo, em vez de apenas uma resposta única.
 
 as actions seguem o modelo cliente-servidor: um nó cliente envia um objetivo a um nó servidor, que o reconhece e retorna tanto o fluxo de feedback quanto o resultado final.
+
+##Client Libraries
+
+I. Usando o colcon para compilar pacotes
+
+1. código instalação
+
+sudo apt install python3-colcon-common-extensions
+
+2. workspace
+
+depois de criar o workspace, verificar se os 4 diretórios estão lá:
+(.
+├── build
+├── install
+├── log
+└── src
+
+4 directories, 0 files)
+
+3. código para testar
+
+colcon test
+
+4. procurando no ambiente
+
+Antes de poder usar qualquer executável ou biblioteca instalada, você precisará adicioná-los aos seus paths e aos caminhos de bibliotecas. O colcon terá gerado arquivos bash/bat no diretório install para ajudar a configurar o ambiente. Esses arquivos adicionam todos os elementos necessários aos paths e caminhos de bibliotecas, além de fornecer quaisquer comandos de shell ou bash exportados pelos pacotes.
+
+código: source install/setup.bash
+
+II. Criando um workspace
+
+III. Criando um pacote
+
+IV. Escrevendo um publisher e subscriber simples (C++)
